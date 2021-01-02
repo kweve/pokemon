@@ -1,0 +1,438 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.pokemon.gui.PerfilActivity"
+    android:background="@color/colorAccent"
+    android:scrollbars="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:paddingTop="60dp"
+        >
+
+    <ImageView
+        android:id="@+id/iPerfil"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_marginBottom="60dp"
+        android:layout_gravity="center"/>
+
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="match_parent"
+        android:layout_height="720dp"
+        android:id="@+id/cardPerfil"
+        app:cardCornerRadius="20dp"
+        app:cardElevation="4dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:paddingTop="20dp"
+            android:paddingLeft="18dp">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="90dp">
+
+                <TextView
+                    android:id="@+id/tNombreElegido"
+                    style="@style/NombresPokemons"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:text="Mi nombre"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.063"/>
+
+                <TextView
+                    android:id="@+id/tGeneroElegido"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:text="Mi género"
+                    android:textColor="@color/colorLessAccent"
+                    android:textSize="18sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/tNombreElegido"
+                    app:layout_constraintVertical_bias="0.058" />
+
+                <ImageButton
+                    android:id="@+id/ibEditarPerfil"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:onClick="configurarPerfil"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.825"
+                    app:layout_constraintStart_toEndOf="@+id/tNombreElegido"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.282"
+                    app:srcCompat="@drawable/editar"
+                    android:background="@color/colorContraste"/>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <TextView
+                android:id="@+id/tMiInicial"
+                style="@style/MyStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="40dp"
+                android:text="Mi inicial"
+                android:textSize="24sp" />
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/cardInicial"
+                android:layout_width="match_parent"
+                android:layout_height="190dp"
+                android:layout_marginRight="20dp"
+                app:cardCornerRadius="20dp"
+                app:cardElevation="4dp"
+                app:cardUseCompatPadding="true">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <ImageView
+                        android:id="@+id/iPokemonElegido"
+                        android:layout_width="216dp"
+                        android:layout_height="267dp"
+                        android:layout_marginStart="172dp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintVertical_bias="0.257"
+                        app:srcCompat="@drawable/chespin" />
+
+                    <TextView
+                        android:id="@+id/rbPokemonElegido"
+                        style="@style/NombresPokemons"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="32dp"
+                        android:layout_weight="1"
+                        android:text="Chespin"
+                        android:textColor="#4CAF50"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintVertical_bias="0.385" />
+
+                    <TextView
+                        android:id="@+id/tTipoPokemonElegido"
+                        style="@style/TipoPokemons"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:drawableLeft="@drawable/planta"
+                        android:drawablePadding="10dp"
+                        android:gravity="center"
+                        android:paddingLeft="5dp"
+                        android:text="Planta"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toStartOf="@+id/iPokemonElegido"
+                        app:layout_constraintHorizontal_bias="0.367"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/rbPokemonElegido"
+                        app:layout_constraintVertical_bias="0.166" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <TextView
+                android:id="@+id/tMiEquipo"
+                style="@style/MyStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="40dp"
+                android:text="Mi equipo"
+                android:textSize="24sp" />
+
+            <HorizontalScrollView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:scrollbars="none">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <com.google.android.material.card.MaterialCardView
+                        android:id="@+id/card7"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        app:cardCornerRadius="20dp"
+                        app:cardElevation="4dp"
+                        app:cardUseCompatPadding="true">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical"
+                            android:paddingTop="5dp">
+
+                            <ImageButton
+                                android:id="@+id/ibEliminar7"
+                                android:layout_width="20dp"
+                                android:layout_height="20dp"
+                                android:layout_gravity="end"
+                                android:background="@color/colorContraste"
+                                android:onClick="configurarPerfil"
+                                app:srcCompat="@drawable/quitar" />
+
+                            <ImageView
+                                android:id="@+id/iMiEquipo7"
+                                android:layout_width="123dp"
+                                android:layout_height="101dp"
+                                android:layout_gravity="center"
+                                app:srcCompat="@drawable/chespin" />
+
+                            <TextView
+                                android:id="@+id/tMiEquipo7"
+                                style="@style/NombresPokemons"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_margin="10dp"
+                                android:gravity="center"
+                                android:text="Froakie"
+                                android:textSize="18dp" />
+
+                            <TextView
+                                android:id="@+id/tElementoMiEquipo7"
+                                style="@style/TipoPokemons"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:drawableLeft="@drawable/agua"
+                                android:drawablePadding="10dp"
+                                android:gravity="center"
+                                android:text="Agua"
+                                android:textSize="14sp" />
+
+                        </LinearLayout>
+
+                    </com.google.android.material.card.MaterialCardView>
+
+                    <com.google.android.material.card.MaterialCardView
+                        android:id="@+id/card8"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        app:cardCornerRadius="20dp"
+                        app:cardElevation="4dp"
+                        app:cardUseCompatPadding="true">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical"
+                            android:paddingTop="5dp">
+
+                            <ImageButton
+                                android:id="@+id/ibEliminar8"
+                                android:layout_width="20dp"
+                                android:layout_height="20dp"
+                                android:layout_gravity="end"
+                                android:background="@color/colorContraste"
+                                android:onClick="configurarPerfil"
+                                app:srcCompat="@drawable/quitar" />
+
+                            <ImageView
+                                android:id="@+id/iMiEquipo8"
+                                android:layout_width="123dp"
+                                android:layout_height="101dp"
+                                android:layout_gravity="center"
+                                app:srcCompat="@drawable/chespin" />
+
+                            <TextView
+                                android:id="@+id/tMiEquipo8"
+                                style="@style/NombresPokemons"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_margin="10dp"
+                                android:gravity="center"
+                                android:text="Froakie"
+                                android:textSize="18dp" />
+
+                            <TextView
+                                android:id="@+id/tElementoMiEquipo8"
+                                style="@style/TipoPokemons"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:drawableLeft="@drawable/agua"
+                                android:drawablePadding="10dp"
+                                android:gravity="center"
+                                android:text="Agua"
+                                android:textSize="14sp" />
+
+                        </LinearLayout>
+
+                    </com.google.android.material.card.MaterialCardView>
+
+                    <com.google.android.material.card.MaterialCardView
+                        android:id="@+id/card9"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        app:cardCornerRadius="20dp"
+                        app:cardElevation="4dp"
+                        app:cardUseCompatPadding="true">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical"
+                            android:paddingTop="5dp">
+
+                            <ImageButton
+                                android:id="@+id/ibEliminar9"
+                                android:layout_width="20dp"
+                                android:layout_height="20dp"
+                                android:layout_gravity="end"
+                                android:background="@color/colorContraste"
+                                android:onClick="configurarPerfil"
+                                app:srcCompat="@drawable/quitar" />
+
+                            <ImageView
+                                android:id="@+id/iMiEquipo9"
+                                android:layout_width="123dp"
+                                android:layout_height="101dp"
+                                android:layout_gravity="center"
+                                app:srcCompat="@drawable/chespin" />
+
+                            <TextView
+                                android:id="@+id/tMiEquipo9"
+                                style="@style/NombresPokemons"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_margin="10dp"
+                                android:gravity="center"
+                                android:text="Froakie"
+                                android:textSize="18dp" />
+
+                            <TextView
+                                android:id="@+id/tElementoMiEquipo9"
+                                style="@style/TipoPokemons"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:drawableLeft="@drawable/agua"
+                                android:drawablePadding="10dp"
+                                android:gravity="center"
+                                android:text="Agua"
+                                android:textSize="14sp" />
+
+                        </LinearLayout>
+
+                    </com.google.android.material.card.MaterialCardView>
+
+                    <com.google.android.material.card.MaterialCardView
+                        android:id="@+id/card5"
+                        android:layout_width="150dp"
+                        android:layout_height="240dp"
+                        app:cardCornerRadius="20dp"
+                        app:cardElevation="4dp"
+                        app:cardUseCompatPadding="true">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical"
+                            android:paddingTop="5dp">
+
+                            <ImageButton
+                                android:id="@+id/ibEliminar"
+                                android:layout_width="20dp"
+                                android:layout_height="20dp"
+                                android:background="@color/colorContraste"
+                                android:onClick="configurarPerfil"
+                                android:layout_gravity="end"
+                                app:srcCompat="@drawable/quitar" />
+
+                            <ImageView
+                                android:id="@+id/iMiEquipo1"
+                                android:layout_width="123dp"
+                                android:layout_height="101dp"
+                                android:layout_gravity="center"
+                                app:srcCompat="@drawable/chespin" />
+
+                            <TextView
+                                android:id="@+id/tMiEquipo1"
+                                style="@style/NombresPokemons"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_margin="10dp"
+                                android:gravity="center"
+                                android:text="Froakie"
+                                android:textSize="18dp" />
+
+                            <TextView
+                                android:id="@+id/tElementoMiEquipo1"
+                                style="@style/TipoPokemons"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:drawableLeft="@drawable/agua"
+                                android:drawablePadding="10dp"
+                                android:gravity="center"
+                                android:text="Agua"
+                                android:textSize="14sp" />
+
+                        </LinearLayout>
+
+                    </com.google.android.material.card.MaterialCardView>
+
+                    <com.google.android.material.card.MaterialCardView
+                        android:id="@+id/cardAdd"
+                        android:layout_width="150dp"
+                        android:layout_height="240dp"
+                        app:cardCornerRadius="20dp"
+                        app:cardElevation="4dp"
+                        app:cardUseCompatPadding="true">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical"
+                            android:paddingTop="15dp">
+
+                            <ImageButton
+                                android:id="@+id/ibAdd"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:background="@color/colorContraste"
+                                android:onClick="configurarPerfil"
+                                android:layout_gravity="center"
+                                android:layout_marginTop="75dp"
+                                app:srcCompat="@drawable/add"/>
+
+                        </LinearLayout>
+
+                    </com.google.android.material.card.MaterialCardView>
+
+                </LinearLayout>
+            </HorizontalScrollView>
+
+        </LinearLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+    </LinearLayout>
+
+</ScrollView>

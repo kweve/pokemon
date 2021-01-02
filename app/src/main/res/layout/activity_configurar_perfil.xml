@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.pokemon.MainActivity"
+    android:orientation="vertical"
+    android:background="@color/colorAccent">
+
+    <RelativeLayout
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:layout_gravity="center">
+
+        <ImageView
+            android:id="@+id/iGaleria"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:scaleType="fitXY"
+            android:layout_centerInParent="true"
+            />
+
+        <ImageButton
+            android:id="@+id/ibGaleria"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_marginBottom="86dp"
+            android:background="@drawable/galeria"
+            android:onClick="galeria" />
+
+    </RelativeLayout>
+
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/card0"
+        app:cardCornerRadius="20dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/colorContraste"
+            android:orientation="vertical"
+            android:paddingLeft="66dp"
+            android:paddingTop="66dp"
+            android:paddingRight="66dp">
+
+            <TextView
+                android:id="@+id/tElegirNombre"
+                style="@style/MyStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Nombre" />
+
+            <EditText
+                android:id="@+id/etElegirNombre"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:hint="Nombre de entrenador/a"
+                android:inputType="textPersonName"
+                android:textSize="16dp"/>
+
+            <TextView
+                android:id="@+id/tElegirGenero"
+                style="@style/MyStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="36dp"
+                android:text="Género"/>
+
+            <Spinner
+                android:id="@+id/spElegirGenero"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:ems="10"/>
+
+            <Button
+                android:id="@+id/bContinuarPerfil"
+                style="@style/MyStyleButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:onClick="irPerfil"
+                android:layout_marginTop="66dp"
+                android:background="@drawable/bordes_redondos"
+                android:text="Continuar" />
+
+        </LinearLayout>
+    </com.google.android.material.card.MaterialCardView>
+
+</LinearLayout>
+
+

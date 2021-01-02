@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimaryDark">#281140</color>
+    <color name="colorPrimaryLessDark">#472773</color>
+    <color name="colorPrimary">#7F50BF</color>
+    <color name="colorLessAccent">#8A63BF</color>
+    <color name="colorAccent">#C2ACF2</color>
+    <color name="colorContraste">#FDFCFC</color>
+    <color name="colorContraste2">#020202</color>
+
+    <color name="violet_dark">#2a103f</color>
+    <color name="violet_dark_2">#562a7f</color>
+    <color name="violet_normal">#794bb5</color>
+    <color name="violet_light">#9767cb</color>
+    <color name="violet_light_2">#c9aaf5</color>
+</resources>
